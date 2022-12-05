@@ -161,3 +161,4 @@ $(document).on('click', '#modal_btn', function (e) {
 AOS.init({
   duration: 1000,
 })
+

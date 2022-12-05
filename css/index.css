@@ -17,6 +17,7 @@
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
    
 
@@ -63,23 +64,84 @@ a{color:#666;text-decoration:none;}
     width: 100px; height: 2px; background-color: #fff;
 }
 #content1>section>h2{position: relative;
+    font-family:'Montserrat', sans-serif;
     font-weight: bold; font-size: 120px;
-    left: 100px;
+    text-align: center;
+
     text-decoration: underline;
     text-underline-position : under; /*조금 더 밑으로*/
-    text-decoration-thickness: 2px; /* 밑줄 굵기 */
-    -webkit-animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;}
-@-webkit-keyframes tracking-in-expand {
-        0% {letter-spacing: -0.5em;
-            opacity: 0;}
-        40% {opacity: 0.6;}
-        100% {opacity: 1;}}
-@keyframes tracking-in-expand {
-        0% {letter-spacing: -0.5em;
-            opacity: 0;}
-        40% {opacity: 0.6;}
-        100% {opacity: 1;}}
+    text-decoration-thickness: 2px; /* 밑줄 굵기 */}
+
+/* 텍스트 애니메이션 https://codepen.io/equinusocio/pen/KNYOxJ */
+:root {
+	--delay: 0;
+	--duration: 1500ms;
+	--iterations: 2;
+}
+
+.reveal-text,
+.reveal-text::after {
+	animation-delay: var(--animation-delay, 2s);
+	animation-iteration-count: var(--iterations, 1);
+	animation-duration: var(--duration, 800ms);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+	--animation-delay: var(--delay, 0);
+	--animation-duration: var(--duration, 800ms);
+	--animation-iterations: var(--iterations, 1);
+	animation-name: clip-text;
+	white-space: nowrap;
+	cursor: default;}
+	
+	.reveal-text:after {
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transform: scaleX(0);
+		transform-origin: 0 50%;
+		pointer-events: none;
+		animation-name: text-revealer;
+	}
+	
+
+
+@keyframes clip-text {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+
+@keyframes text-revealer {
+	
+	0%, 50% {
+		transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		transform: scaleX(1);
+	}
+	
+	100% {
+		transform: scaleX(0);
+	}
+}
+
 
 .bar_x{position: fixed;
     z-index: 99;
@@ -117,8 +179,8 @@ a{color:#666;text-decoration:none;}
 
 .text_box{
     position: relative;
-    bottom: 150px;
-    left: 200px;
+    bottom: 180px;
+    text-align: center;
     font-size: 3rem;
     text-align: center;
   }
@@ -141,7 +203,7 @@ a{color:#666;text-decoration:none;}
 .scroll>a span {
     position: fixed;
     cursor: default;
-    top: 900px;
+    top: 880px;
     left: 50%;
     width: 24px;
     height: 24px;
