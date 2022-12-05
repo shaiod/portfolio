@@ -74,3 +74,45 @@ scrollTop 은 윈도우에서 스크롤의 위치가 가장 상위에 있다는 
     });
     
 });
+
+// click on 라벨 추가 모달 열기
+$(document).on('click', '#modal_btn', function (e) {
+    console.log("click event");
+    $('#modal').addClass('show');
+  
+  });
+  
+  // 모달 닫기
+  $(document).on('click', '#close_btn', function (e) {
+    console.log("click event");
+    $('#modal').removeClass('show');
+  
+  });
+
+  $(document).on('click', '#modal_btn2', function (e) {
+    console.log("click event");
+    $('#modal2').addClass('show');
+  
+  });
+  
+  // 모달 닫기
+  $(document).on('click', '#close_btn2', function (e) {
+    console.log("click event");
+    $('#modal2').removeClass('show');
+  
+  });
+
+  $(document).on('click', '#modal_btn3', function (e) {
+    console.log("click event");
+    $('#modal3').addClass('show');
+  
+  });
+  
+  // 모달 닫기
+  $(document).on('click', '#close_btn3', function (e) {
+    console.log("click event");
+    $('#modal3').removeClass('show');
+  
+  });
+ 
+ 

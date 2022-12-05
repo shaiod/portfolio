@@ -9,6 +9,27 @@
 <script defer src="./js/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var index = 0;  
+        window.onload = function(){
+            slideShow();
+        }
+        
+        function slideShow() {
+        var i;
+        var x = document.getElementsByClassName("slide");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none"; 
+        }
+        index++;
+        if (index > x.length) {
+            index = 1; 
+        }   
+        x[index-1].style.display = "block";
+        setTimeout(slideShow, 5000);
+     
+    }
+    </script>
 </head>
 <body>
 <!-- header -->
@@ -34,64 +55,78 @@
                 <span class="text"></span><span class="blink">|</span>
             </div>
 		</section>
+    <div class="scroll">
+        <a href="#"><span></span></a>
+    </div>
 	</div>
 	<!-- //content1 -->
-	
-	<!-- content2 -->
-	<div id="content2">
-        <h3>MENU</h3>
-		<section>
-			<ul>
-            <li class="cj_one_go"><a href="#content3">
-                <img class="cj_a" src="./img/CJ_ONE.png" style="height: 50px;" />
-
-            </a></li>
-            <li class="mega_go"><a href="#content4">
-                <img class="mega_a" src="./img/mega_coffee.png" style="height: 50px;" />
-                <img class="mega_b" src="./img/mega_coffeeW.png" style="height: 50px;" />
-            </a></li>
-            <li class="samsung_go"><a href="#content5">
-                <img src="./img/samsung.png" />
-            </a></li>
-            <li class="kakao_go"><a href="#content6">
-                <img src="./img/kakao_logo.png" style="height: 60px;" />
-            </a></li>
-            <li class="seoul_go"><a href="#content7">
-                <img class="seoul_a" src="./img/seoul_logo.png" style="height: 50px;"/>
-                <img class="seoul_b" src="./img/seoul_logoW.png" style="height: 50px;" />
-            </a></li>
-            <li class="contact_go"><a href="#content8">CONTACT</a></li>
-            </ul>
-		</section>
-	</div>
-	<!-- //content2 -->
-
+    <!-- content2 삭제 -->
 	<!-- content3 -->
 	<div id="content3">
 		<h2 class="cjone_name">CJONE<span>씨제이원</span></h2>
         <section>
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/cj_one/" target="_blank">
                 ▶VIEW WEBSITE</a></div>
-            <div class="cjone_img">
-                <img src="./img/dfd.png" style="transform: scale(0.8);"/>
-            </div>
+                <div class="container">
+                    <div class="modal-btn-box">
+                        <button type="button" id="modal_btn" class="white underline" 
+                        style="background:none; color: #fff; border: none; margin-top: 20px; cursor: pointer;
+                        font-weight: normal;">
+                            ▶ 웹접근성검사
+                        </button>
+                        <div class="modal" id="modal">
+                            <div class="modal_body">          
+                                <div class="close_btn" id="close_btn">x</div>
+                                <img src="./img/씨제이원 보고서_1.jpg" alt="씨제이원보고서"/>
+                                <p>웹 접근성 검사를 100%로 통과하였습니다.</p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    
+                <div class="cj_img">
+                    <img src="./img/MacBook Pro.png" />
+                    <div class="cj_img1"></div>
+                </div>
+                <div class="cj_imgT">
+                    <img src="./img/iPad pro 12.png" />
+                    <div class="cj_img2"></div>
+                </div>
+                <div class="cj_imgP">
+                    <img src="./img/iPhone 14 Pro - FREE.png" />
+                    <div class="cj_img3"></div>
+                </div>
             <div class="cj_info">
 			<div class="cj_info1">
                 <ul>
-                <li><span class="info_g">CJONE</span> 사이트를 참고하여
-                    구현한 사이트입니다. PC버전을 메인으로 하여
-                    모바일, 타블렛PC 화면에 맞춘
-                    사이즈로 제작하였습니다.
+                <li class="info_g">About</li>
+                <li>
+                    CJONE 사이트를 참고하여 구현한 사이트입니다.
+                    <ul class="cj_info1_info">
+                        <li>-PC, 모바일, 타블렛 화면에 맞는 사이즈 전환</li>
+                        <li>-자동으로 움직이는 메인 배너</li>
+                        <li>-자바스크립트로 부드럽게 내려오는 메뉴 설정</li>
+                    </ul>
                 </li>
                 </ul>
             </div>
             <div class="cj_info2">
                 <ul>
-                <li>사용언어
+                <li><span class="info_g">Language</span>
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>JAVASCRIPT</li>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            <div class="cj_info3">
+                <ul>
+                <li><span class="info_g">Effect</span>
+                    <ul>
+                        <li>ANIMATION</li>
+                        <li>TRANSITION</li>
                     </ul>
                 </li>
                 </ul>
@@ -106,32 +141,72 @@
         <h2 class="mga_name">MEGACOFFEE<span>메가커피</span></h2>
 		<section>
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/Megacoffee/" target="_blank">
-                ▶VIEW WEBSITE</a>
+                ▶ VIEW WEBSITE</a>
             </div>
-            <div class="mega_sub">
-                <a href="https://shaiod.github.io/Megacoffee/sub1.html" target="_blank">#sub1</a>
-                <a href="https://shaiod.github.io/Megacoffee/sub2.html" target="_blank">#sub2</a>
-            </div>
+            <div class="container2">
+                <div class="modal-btn-box2">
+                    <button type="button" id="modal_btn2" class="white underline" 
+                    style="background:none; color: #fff; border: none; margin-top: 20px; cursor: pointer;
+                    font-weight: normal;">
+                        ▶ 웹접근성검사
+                    </button>
+                    <div class="modal2" id="modal2">
+                        <div class="modal_body2">          
+                            <div class="close_btn2" id="close_btn2">x</div>
+                            <img src="./img/메가커피 보고서_1.jpg" />
+                            <p>웹 접근성 검사와 html/css검사를 100%로 통과하였습니다.</p>
+                            <p><a href="./img/메가커피-html검사.png" target="_blank">Html검사 결과보기</a></p>
+                            <p><a href="./img/css검사서비스-메가커피.PNG" target="_blank">Css검사 결과보기</a></p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
             <div class="mega_img">
-                <img src="./img/dcd.png" style="transform: scale(0.7);"/>
+                <img src="./img/MacBook Pro.png" />
+                <div class="mega_img1"></div>
+            </div>
+            <div class="mega_imgT">
+                <img src="./img/iPad pro 12.png" />
+                <div class="mega_img2"></div>
+            </div>
+            <div class="mega_imgP">
+                <img src="./img/iPhone 14 Pro - FREE.png" />
+                <div class="mega_img3"></div>
             </div>
             <div class="mga_info">
 			<div class="mga_info1">
                 <ul>
-                <li><span class="info_g">메가커피</span> 사이트를
-                    구현한 사이트입니다. PC버전을 메인으로 하여
-                    모바일, 타블렛PC 화면에 맞추어,
+                <li class="info_g">About</li>
+                <li>메가커피 사이트를
+                    구현한 사이트입니다. <br>
+                    모바일, 타블렛PC 화면에 맞춘 반응형 웹사이트로,<br>
                     메인 페이지와 서브 페이지를 함께 제작하였습니다.
                 </li>
                 </ul>
             </div>
             <div class="mga_info2">
                 <ul>
-                    <li><span class="info_g">사용언어</span>
+                    <li><span class="info_g">Language</span>
                         <ul>
                             <li>HTML, CSS, JAVASCRIPT</li>
+                            <li>:after,:before,transition 등을 이용하여
+                                hover 효과를 주고,<br>자바스크립트와 jquery를
+                                사용하여 페이지 전환 효과와 <br> 애니메이션 효과를
+                                구현하였습니다.
+                            </li>
                         </ul>
                     </li>
+                </ul>
+            </div>
+            <div class="mga_info3">
+                <ul>
+                <li><span class="info_g">Effect</span>
+                    <ul>
+                        <li></li>
+                        <li>ANIMATION</li>
+                        <li>TRANSITION</li>
+                    </ul>
+                </li>
                 </ul>
             </div>
             </div>
@@ -145,31 +220,64 @@
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/Samsung_el/" target="_blank">
                 ▶VIEW WEBSITE</a>
             </div>
-            <div class="sa_sub">
-                <a href="https://shaiod.github.io/Samsung_el/sub1.html" target="_blank">#sub1</a>
-                <a href="https://shaiod.github.io/Samsung_el/sub2.html" target="_blank">#sub2</a>
-            </div>
+            <div class="container3">
+                <div class="modal-btn-box3">
+                    <button type="button" id="modal_btn3" class="white underline" 
+                    style="background:none; color: #fff; border: none; margin-top: 20px; cursor: pointer;
+                    font-weight: normal;">
+                        ▶ 웹접근성검사
+                    </button>
+                    <div class="modal3" id="modal3">
+                        <div class="modal_body3">          
+                            <div class="close_btn3" id="close_btn3">x</div>
+                            <img src="./img/삼성전기 보고서_1.jpg"  alt="삼성전기보고서"/>
+                            <p>웹 접근성 검사를 100%로 통과하였습니다.</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
             <div class="sa_img"></div>
             <div class="sa_img2">
-                <img src="./img/samsung_screen.png"
+                <ul class="slide-show">
+                    <li class="slide">
+                        <img src="./img/Samsung_screen.png" />
+                    </li>
+                    <li class="slide">
+                        <img src="./img/samsung_sub (1).png" />
+                    </li>
+                    <li class="slide"> 
+                        <img src="./img/samsung_sub (2).png" />
+                    </li>
+                </ul>
             </div>
             <div class="sa_info">
                 <div class="sa_info1">
                     <ul>
-                    <li><span class="info_g">삼성전기</span> 사이트를
-                        구현한 사이트입니다. PC 화면 사이즈에 최적화하여,
+                    <li class="info_g">About</li>
+                    <li>삼성전기 사이트를 구현한 사이트입니다. <br>PC 화면 사이즈에 최적화하여,
                         메인 페이지와 서브 페이지를 함께 제작하였습니다.
                     </li>
                     </ul>
                 </div>
                 <div class="sa_info2">
                     <ul>
-                        <li><span class="info_g">사용언어</span>
+                        <li><span class="info_g">Language</span>
                             <ul>
                                 <li>HTML, CSS, JAVASCRIPT</li>
                             </ul>
                         </li>
                     </ul>
+            </div>
+            <div class="sa_info3">
+                <ul>
+                <li><span class="info_g">Effect</span>
+                    <ul>
+                        <li></li>
+                        <li>ANIMATION</li>
+                        <li>TRANSITION</li>
+                    </ul>
+                </li>
+                </ul>
             </div>
             </div>
 		</section>
@@ -185,21 +293,21 @@
                 <video src="./img/kakao.mp4" style="transform: scale(0.8);" autoplay true />
             </div>
             <div class="ka_img">
-                <img class="kai1" src="./img/kakao_home.png" />
-                <img class="kai2" src="./img/kakao_profile.png" />
+                <img class="kai1" src="./img/kakao_home.png" alt="카카오홈"/>
+                <img class="kai2" src="./img/kakao_profile.png" alt="카카오프로필"/>
             </div>
             <div class="ka_info">
 			<div class="ka_info1">
                 <ul> 
                 <li><span class="info_g">카카오톡</span> 어플을 참고하여
-                    구현한 리액트 앱입니다. 로그인 기능부터 로그아웃, 프로필 기능, 채팅화면,
-                    친구 리스트 등의 기능을 구현하였습니다.
+                    구현한 리액트 앱입니다.<br> 로그인 기능부터 로그아웃, 프로필 기능, 채팅화면,
+                    친구 리스트<br> 등의 기능을 구현하였습니다.
                 </li>
                 </ul>
             </div>
             <div class="ka_info2">
                 <ul>
-                    <li><span class="info_g">사용언어</span>
+                    <li><span class="info_g">Language</span>
                         <ul>
                             <li>HTML</li>
                             <li>CSS,SCSS</li>
@@ -217,7 +325,7 @@
     <div id="content7">
         <h2 class="se_name">SEOULSTAY<span>서울스테이</span></h2>
 		<section>
-            <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/cj_one/" target="_blank">
+            <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/seoul_stay/" target="_blank">
                 ▶VIEW WEBSITE</a></div>
             <div class="se_img">
                 <img src="./img/seoul_screen.png" style="transform: scale(0.8);"/>
@@ -225,22 +333,37 @@
             <div class="se_info">
 			<div class="se_info1">
                 <ul>
-                <li><span class="info_g">서울스테이</span> 사이트를 참고하여
-                    구현한 사이트입니다. PC버전을 메인으로 하여
-                    모바일, 타블렛PC 화면에 맞춘
-                    사이즈로 제작하였습니다.
-                </li>
+                    <li class="info_g">About</li>
+                    <li>
+                        서울스테이 사이트를 참고하여 구현한 사이트입니다.
+                        <ul class="se_info1_info">
+                        <li>-PC, 모바일, 타블렛 화면에 맞는 사이즈 전환</li>
+                        <li>-자바스크립트로 부드럽게 내려오는 메뉴 설정</li>
+                        <li>-홈,메인페이지와 4개의 서브페이지,사이트맵 구현</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="se_info2">
                 <ul>
-                    <li><span class="info_g">사용언어</span>
+                    <li><span class="info_g">Language</span>
                         <ul>
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JAVASCRIPT</li>
                         </ul>
                     </li>
+                </ul>
+            </div>
+            <div class="se_info3">
+                <ul>
+                <li><span class="info_g">Effect</span>
+                    <ul>
+                        <li></li>
+                        <li>ANIMATION</li>
+                        <li>TRANSITION</li>
+                    </ul>
+                </li>
                 </ul>
             </div>
             </div>
@@ -264,10 +387,9 @@
             <div class="add">
                 <ul>
                     <li class="contact_"><span class="add_title">GITHUB</span><a href="https://github.com/shaiod" target="_blank">https://github.com/shaiod</a></li>
-                    <li class="contact_"><span class="add_title">E-MAIL</span><a href="#">메일주소</a></li>
-                    <li class="contact_"><span class="add_title">PHONE</span><a href="#">연락처</a></li>
+                    <li class="contact_"><span class="add_title">E-MAIL</span>shaiod@naver.com</li>
                 </ul>
-                <dl>
+                <dl class="skill">
                     <dt>자격증</dt>
                     <dd>컴퓨터활용능력1급,2급</dd>
                     <dd>ERP 물류/생산 정보관리사 1급</dd>
