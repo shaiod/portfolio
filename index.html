@@ -8,6 +8,9 @@
 <link rel="stylesheet" href="./css/index.css" />
 <script defer src="./js/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+<link rel="shortcut icon" href="./img/bmobmo.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
         var index = 0;  
@@ -63,7 +66,7 @@
 	<!-- content3 -->
 	<div id="content3">
 		<h2 class="cjone_name">CJONE<span>씨제이원</span></h2>
-        <section>
+        <section data-aos="fade-right">
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/cj_one/" target="_blank">
                 ▶VIEW WEBSITE</a></div>
                 <div class="container">
@@ -138,7 +141,7 @@
 	<!-- content4 -->
 	<div id="content4">
         <h2 class="mga_name">MEGACOFFEE<span>메가커피</span></h2>
-		<section>
+		<section data-aos="fade-left">
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/Megacoffee/" target="_blank">
                 ▶ VIEW WEBSITE</a>
             </div>
@@ -215,7 +218,7 @@
     <!-- content5 -->
 	<div id="content5">
         <h2 class="sa_name">삼성전기</h2>
-		<section>
+		<section data-aos="fade-up-right">
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/Samsung_el/" target="_blank">
                 ▶VIEW WEBSITE</a>
             </div>
@@ -237,17 +240,7 @@
                 </div>
             <div class="sa_img"></div>
             <div class="sa_img2">
-                <ul class="slide-show">
-                    <li class="slide">
-                        <img src="./img/Samsung_screen.png" />
-                    </li>
-                    <li class="slide">
-                        <img src="./img/samsung_sub (1).png" />
-                    </li>
-                    <li class="slide"> 
-                        <img src="./img/samsung_sub (2).png" />
-                    </li>
-                </ul>
+                <img src="./img/Samsung_screen.png" alt="삼성전기 메인페이지"/>
             </div>
             <div class="sa_info">
                 <div class="sa_info1">
@@ -285,23 +278,19 @@
     <!-- contetn6 -->
     <div id="content6">
         <h2 class="ka_name">KAKAO<span>카카오</span></h2>
-		<section>
+		<section data-aos="fade-up-left">
             <div class="white underline"><a class="btn_1" href=" https://shaiod.github.io/kakao_app/" target="_blank">
                 ▶VIEW APP</a></div>
             <div class="ka_video">
-                <video src="./img/kakao.mp4" style="transform: scale(0.8);" autoplay true />
-            </div>
-            <div class="ka_img">
-                <img class="kai1" src="./img/kakao_home.png" alt="카카오홈"/>
-                <img class="kai2" src="./img/kakao_profile.png" alt="카카오프로필"/>
+                <video src="./img/kakao.mp4" muted autoplay loop />
             </div>
             <div class="ka_info">
 			<div class="ka_info1">
                 <ul> 
-                <li><span class="info_g">카카오톡</span> 어플을 참고하여
-                    구현한 리액트 앱입니다.<br> 로그인 기능부터 로그아웃, 프로필 기능, 채팅화면,
-                    친구 리스트<br> 등의 기능을 구현하였습니다.
-                </li>
+                <li><span class="info_g">About</span></li>
+                <li>카카오톡 어플을 참고하여
+                    구현한<br> 리액트 앱입니다.</li>
+                <li>-계정생성, 로그인/로그아웃, 친구리스트, 프로필, 채팅화면</li>
                 </ul>
             </div>
             <div class="ka_info2">
@@ -311,7 +300,7 @@
                             <li>HTML</li>
                             <li>CSS,SCSS</li>
                             <li>JAVASCRIPT</li>
-                            <li>REACT</li>
+                            <li>REACT,FIREBASE</li>
                         </ul>
                     </li>
                 </ul>
@@ -323,11 +312,42 @@
     <!-- content7 -->
     <div id="content7">
         <h2 class="se_name">SEOULSTAY<span>서울스테이</span></h2>
-		<section>
+		<section data-aos="fade-up">
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/seoul_stay/" target="_blank">
-                ▶VIEW WEBSITE</a></div>
+                ▶VIEW WEBSITE</a><div class="dot"></div></div>
+            <div class="container4">
+                <div class="modal-btn-box4">
+                <button type="button" id="modal_btn4" class="white underline" 
+                    style="background:none; color: #fff; border: none; margin-top: 20px; cursor: pointer;
+                    font-weight: normal;">
+                        ▶ 웹접근성검사
+                </button>
+                <div class="modal4" id="modal4">
+                <div class="modal_body4">          
+                    <div class="close_btn4" id="close_btn4">x</div>
+                    <img src="./img/서울스테이 보고서_1.JPG" alt="서울스테이보고서"/>
+                    <p>웹 접근성 검사와 html/css검사를 100%로 통과하였습니다.</p>
+                    <p><a href="img/서울스테이-html검사.png" target="_blank">Html검사 결과보기</a></p>
+                    <p><a href="img/css검사-서울스테이.PNG" target="_blank">Css검사 결과보기</a></p>
+                </div>
+                </div>
+                </div>
+                    </div>
             <div class="se_img">
-                <img src="./img/seoul_screen.png" style="transform: scale(0.8);"/>
+                <ul class="slide-show">
+                    <li class="slide">
+                        <img src="./img/seoul_home.png" alt="서울스테이 홈이미지" />
+                    </li>
+                    <li class="slide">
+                        <img src="./img/seoul_screen.png" alt="서울스테이메인이미지" />
+                    </li>
+                    <li class="slide"> 
+                        <img src="./img/seoul_2.png" alt="서울스테이서브이미지" />
+                    </li>
+                    <li class="slide"> 
+                        <img src="./img/seoul_3.png" alt="서울스테이서브이미지2" />
+                    </li>
+                </ul>
             </div>
             <div class="se_info">
 			<div class="se_info1">
@@ -378,15 +398,32 @@
             <div class="img2"></div>
             <dl>
                 <dt>KANG YU JIN</dt>
-                <dd>웹디자이너와 개발자를 꿈꾸는,
+                <dd>웹UI 개발자를 꿈꾸는,
                     성장중인 강유진입니다.  
                 </dd>
             </dl>
             </div>
             <div class="add">
                 <ul>
-                    <li class="contact_"><span class="add_title">GITHUB</span><a href="https://github.com/shaiod" target="_blank">https://github.com/shaiod</a></li>
-                    <li class="contact_"><span class="add_title">E-MAIL</span> <a href='mailto:shaiod@naver.com'>shaiod@naver.com</a></li>
+                    <li class="contact_">
+                        <ul>
+                            <li><span class="add_title">GITHUB</span></li>
+                            <li><a href="https://github.com/shaiod" target="_blank">https://github.com/shaiod</a></li>
+                        </ul>
+                    </li>
+                    <li class="contact_2">
+                        <ul>
+                        <li><span class="add_title">E-MAIL</span></li>
+                        <li><a href="mailto:shaiod@naver.com">메일보내기</a></li>
+                        </ul>
+                    </li>
+                    <li class="contact_3">
+                        <ul>
+                        <li><span class="add_title">SKILL</span></li>
+                        <li><img src="./img/MYSKILL.png" /></li>
+                        </ul>
+                    </li>
+                    
                 </ul>
                 <dl class="skill">
                     <dt>자격증</dt>
@@ -398,6 +435,9 @@
                 <dl class="ac">
                     <dt>22.07~ 22.12</dt>
                     <dd>이젠아카데미 UIUX& 프론트엔드 과정 수료</dd>
+                    <dd>CJONE, 삼성전기, 메가커피, 카카오 어플, 서울스테이
+                        홈페이지 작업.
+                    </dd>
                     <dd></dd>
                 </dl>
             </div>

@@ -61,7 +61,7 @@ $(window).on("wheel", function(e){
 
 
 
-const content = "웹 개발자와 디자이너를 꿈꾸는 강유진입니다.";
+const content = "웹 UI 개발자를 꿈꾸는 강유진입니다.";
 const text = document.querySelector(".text");
 let i = 0;
 
@@ -143,4 +143,21 @@ $(document).on('click', '#modal_btn', function (e) {
   
   });
  
+  $(document).on('click', '#modal_btn4', function (e) {
+    console.log("click event");
+    $('#modal4').addClass('show');
+  
+  });
+  
+  // 모달 닫기
+  $(document).on('click', '#close_btn4', function (e) {
+    console.log("click event");
+    $('#modal4').removeClass('show');
+  
+  });
  
+
+
+AOS.init({
+  duration: 1000,
+})
