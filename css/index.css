@@ -781,7 +781,7 @@ font-size: 28px;
     left: 100px; top: 130px;
     margin-left: 30px;}
 
-
+.profile_{width:400px; height: 1000px;}
 .profile_>.img{position: relative;
     top: 210px; left: 290px;
     width: 400px; height: 400px;
@@ -812,6 +812,16 @@ font-size: 28px;
 .add_title{font-weight: bold;}
 .add>ul>li span{margin-right: 30px;}
 
+.skill{position: absolute;
+    left: 50rem; bottom: 300px;
+    font-size: 26px;}
+.skill>dt{font-weight: bold;}
+.skill>dd{font-size: 20px;}
+
+.ac{position: absolute; font-size: 26px;
+left: 50rem; bottom: 200px;}
+.ac>dt{font-weight: bold;}
+.ac>dd{font-size: 20px;}
 /* bmo */
 .nemo{position:relative; background: #41cdcd;
     bottom: 350px; left: 50rem;
