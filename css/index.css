@@ -814,9 +814,9 @@ font-size: 28px;
 
 /* bmo */
 .nemo{position:relative; background: #41cdcd;
-    bottom: 400px; left: 50rem;
+    bottom: 350px; left: 50rem;
     width:120px;height:150px;border-radius: 5px;}
-.nemo:hover{bottom: 450px;
+.nemo:hover{bottom: 400px;
     transition: all 0.5s linear 0s;}
 .line{position:absolute;background: green;top:90px;left:20px; width:40px;height:10px;
     box-shadow: 1px 1px 1px #666;}
