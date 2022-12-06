@@ -33,6 +33,318 @@
      
     }
     </script>
+    <style> 
+        .emoji{position: relative;display: inline-block;width:120px;height:120px;
+        left: 18%; top: 200px;
+        border-radius: 50%;margin:15px 15px 40px;background: #ffda6a;}
+        .emoji.after{content:"Emoji";
+        position:absolute; bottom:-40px; left:calc(50% - 30px);
+        width:60px;font-size: 18px;color:#8a8a8a;}
+
+        /* 1.emoji_like */
+        .emoji_like{background: #548dff;}
+    
+        .emoji_like .emoji_hand{position:absolute;left:25px;bottom:30px;
+        width:20px;height:40px;background:#fff;border-radius: 5px;
+        animation: hands-up 2s linear 0s infinite;}
+        @keyframes hands-up{
+            25%{transform: rotate(15deg);}
+            50%{transform: rotate(-15deg) translateY(-10px);}
+            75%, 100%{transform:rotate(0deg);}
+        }
+        .emoji_like .emoji_hand:before{content:"";position:absolute;
+        left:25px;bottom:5px;width:40px;height: 10px;background: #fff;
+        border-radius: 2px 10px 10px 2px;
+        box-shadow: 1px -9px 0 1px #fff,2px -19px 0 2px #fff,3px -29px 0 3px #fff;}
+        .emoji_like .emoji_thumb{position:absolute;right:-25px;top:-25px;
+        border-bottom:20px solid #fff;border-left:20px solid transparent;
+        transform: rotate(5deg);transform-origin:0 100%;
+        animation:thumbs-up 2s linear 0s infinite;}
+        @keyframes thumbs-up{
+            25%{transform:rotate(20deg);}
+            50%, 100%{transform:rotate(5deg);}
+        }
+        
+        .emoji_like .emoji_thumb:before{content:'';position:absolute;
+        left:-9.7px;top:-9px;width:10px;height:12px;background: #fff;
+        border-radius: 50% 50% 0 0;box-shadow: -1px 4px 0 -1px #fff;
+        transform:rotate(-14deg);transform-origin: 100% 100%;}
+
+        /* emoji_love */
+        .emoji_love{background: #f55064;}
+        .emoji_love .emoji_heart{position:absolute;left:50%;top:50%;
+        margin-left:-40px;margin-top:-40px;width:80px;height: 80px;
+        animation:heart-beat 1s linear infinite alternate;}
+        @keyframes heart-beat{
+            25%{transform: scale(1.1);}
+            75%{transform: scale(0.6);}}
+        
+        .emoji_heart:before, .emoji_heart:after{content:'';
+        position:absolute;left:50%;top:50%;
+        width:40px;height: 64px;
+        margin-left:-20px;margin-top:-32px;background:#fff;border-radius:20px 20px 0 0;}    
+        .emoji_heart:before{transform-origin:0 100%;
+                            transform:translateX(20px) rotate(-45deg);}
+        .emoji_heart:after{transform-origin:100% 100%;
+                            transform:translateX(-20px) rotate(45deg);}
+        
+        /* 3.emoji_haha */
+        .emoji_haha .emoji_face{position:absolute;width:100%;height:inherit;
+            animation:haha-face 2s linear infinite normal;}
+            @keyframes haha-face{
+                10%{transform: translateY(25px);}
+                20%{transform: translateY(15px);}
+                
+                30%{transform: translateY(25px);}
+                40%{transform: translateY(15px);}
+
+                50%{transform: translateY(25px);}
+
+                60%{transform: translateY(0);}
+                70%{transform: translateY(-10px);}
+
+                80%{transform: translateY(0);}
+                90%{transform: translateY(-10px);}
+            }
+            
+
+        .emoji_haha .emoji_eyes{position:absolute;left:50%;top:35px;margin-left: -13px;
+        width:26px;height:6px;border-radius:2px;
+        box-shadow:-25px 5px 0 0 #000,25px -5px 0 0 #000;
+        transform:rotate(20deg);}
+        .emoji_haha .emoji_eyes:after{content:"";position:absolute;left:0;top:0;
+        width:26px;height:6px;border-radius: 2px;
+        box-shadow:-25px -5px 0 0 #000, 25px 5px 0 0 #000;
+        transform: rotate(-40deg);}
+        .emoji_haha .emoji_mouth{overflow :hidden; position:absolute;left:50%;top:50%;
+        width:80px;height:40px;margin-left: -40px;background: #000; border-radius: 0 0 40px 40px;
+        animation:haha-mouth 2s linear infinite normal;}
+        @keyframes haha-mouth{
+            10%{transform: scale(0.6);top:45%;}
+            20%{transform: scale(0.8);top:45%;}
+
+            30%{transform: scale(0.6);top:45%;}
+            40%{transform: scale(0.6);top:45%;}
+
+            50%{transform: scale(0.6);top:45%;}
+            
+            60%{transform: scale(0.6);top:45%;}
+            70%{transform: scale(0.6);top:45%;}
+
+            80%{transform: scale(0.6);top:45%;}
+            90%{transform: scale(0.6);top:45%;}
+        }
+        .emoji_haha .emoji_tongue{position:absolute;left:50%;bottom:-10px;
+        width:70px;height: 30px;margin-left:-35px;background: #f55064;
+        border-radius: 50%;}
+        
+        /* 4.emoji_yay */
+        .emoji_yay .emoji_face{position: absolute;width:100%;height: inherit;
+        animation: yay 1s linear infinite alternate;}
+        @keyframes yay{
+            25%{transform: rotate(-15deg);}
+            75%{transform: rotate(15deg);}
+        }
+        .emoji_yay .emoji_eyebrows{position:absolute;
+        left:calc(50% - 3px);top:30px;width:6px;height: 6px;border-radius: 50%;
+        box-shadow: -6px 0 0 0 #000,-36px 0 0 0 #000000,6px 0 0 0 #000,36px 0 0 0 #000;}
+        .emoji_yay .emoji_eyebrows::before,.emoji_yay .emoji_eyebrows:after{content:"";
+        position:absolute;left:calc(50% - 18px);bottom:3px;
+        width:36px;height: 18px;
+        border-radius: 60px 60px 0 0;
+        border:6px solid black;border-bottom: 0;box-sizing: border-box;}
+        .emoji_yay .emoji_eyebrows:before{margin-left: -21px;}
+        .emoji_yay .emoji_eyebrows:after{margin-left: 21px;}
+        .emoji_yay .emoji_mouth{position: absolute;left:calc(50% - 3px);top:60px;
+        width:6px;height: 6px;border-radius: 50%;
+        box-shadow:-25px 0 0 0 #000,25px 0 0 0 #000,-35px -2px 30px 10px #d5234c,35px -2px 30px 10px
+        #d5234c;}
+        .emoji_yay .emoji_mouth:after{content:'';
+        position:absolute;left:calc(50% - 40px);top:-64px;
+        width:80px;height:80px;border-radius: 50%;
+        border:6px solid #000;box-sizing: border-box;
+        border-top-color:transparent;
+        border-right-color: transparent;
+        border-left-color:transparent;}
+
+        /* 5.emoji_wow */
+        .emoji_wow .emoji_face{position:absolute;width:100%;height: inherit;
+            animation: wow-face 3s linear 0s infinite ;}
+        @keyframes wow-face{
+            15%,25%{transform:rotate(20deg) translateX(-25px);}
+            45%,65%{transform:rotate(-20deg) translateX(25px);}
+            75%,100%{transform:rotate(0deg) translateX(0px);}
+        }    
+        .emoji_wow .emoji_eyebrows{position:absolute;left:calc(50% - 3px);
+        width:6px;height:6px;border-radius: 50%;
+        box-shadow: -18px 0 0 0 #000,-33px 0 0 0 #000,
+        18px 0 0 0 #000,33px 0 0 0 #000;
+        animation: wow-brow 3s linear 0s infinite;}
+        @keyframes wow-brow{
+            15%,65%{top:25px;}
+            75%,100%,0%{top:15px;}
+        }
+
+        .emoji_wow .emoji_eyebrows:before, .emoji_wow .emoji_eyebrows:after{content:'';
+        position:absolute;left:calc(50% - 12px);top:-3px;
+        width:24px;height: 20px;border-radius: 50%;
+        border:6px solid #000;box-sizing: border-box;
+        border-right-color: transparent;
+        border-bottom-color:transparent;
+        border-left-color: transparent;}
+        .emoji_wow .emoji_eyebrows:before{margin-left:-25px;}
+        .emoji_wow .emoji_eyebrows:after{margin-left: 25px;}
+       
+        .emoji_wow .emoji_eyes{position:absolute;left:calc(50% - 8px); top:35px;
+            width:16px;height:24px;border-radius: 50%;
+            box-shadow: 25px 0 0 0 #000, -25px 0 0 0 #000;}
+
+        .emoji_wow .emoji_tongue{position:absolute;left:calc(50% - 15px);top:50%;
+            width:30px;height:45px; border-radius: 50%;background: #000;
+            animation: wow-mouth 3s linear 0s infinite;}
+            @keyframes wow-mouth{
+                10%,30%{width:20px;height: 20px;left:calc(50% - 10px);}
+                50%,70%{width:30px;height: 40px;left:calc(50% - 15px);}
+                75%,100%{height: 50px;}
+            }
+
+        /* 6.emoji_sad */
+        .emoji_sad .emoji_face{position:absolute;width:100%;height:inherit;
+            animation:sad-face 2s ease-in 0s infinite;}
+            @keyframes sad-face{
+                25%,35%{top:-15px;}
+                55%,95%{top:10px;}
+                100%,0%{top:0;}
+            }
+
+        .emoji_sad .emoji_eyebrows{position:absolute;
+            left:calc(50% - 3px);top:35px;width:6px;height:6px;border-radius: 50%;
+            box-shadow:-40px 9px 0 0 #000,-25px 0 0 0 #000,
+                        25px 0 0 0 #000,40px 9px 0 0 #000;}
+
+        .emoji_sad .emoji_eyebrows:before, .emoji_sad .emoji_eyebrows:after{content:'';
+            position:absolute;left:calc(50% - 15px);top:2px;border-radius: 50%;
+            width:30px;height: 20px;border:6px solid #000;box-sizing: border-box;
+            border-left-color:transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;}
+        .emoji_sad .emoji_eyebrows:before{margin-left:-30px;transform: rotate(-30deg);}
+        .emoji_sad .emoji_eyebrows:after{margin-left:30px;transform: rotate(30deg);}
+        
+        .emoji_sad .emoji_eyes{position:absolute;left:calc(50% - 7px);top:50px;
+            width:14px;height: 16px;border-radius: 50%;box-shadow: 25px 0 0 0 #000,-25px 0 0 0 #000;}
+        .emoji_sad .emoji_eyes:after{content:'';position:absolute;
+            width:12px;height:12px;margin-left: 6px;background: #548dff;
+            border-radius: 0 100% 40% 50% / 0 50% 40% 100%;
+            animation:tear-drop 3s ease-in 0s infinite;}
+            @keyframes tear-drop{
+                0%,100%{display:block;left:35px;top:15px;
+                transform:rotate(45deg) scale(0);}
+                25%{display:block;left:35px;
+                transform:rotate(45deg) scale(2);}
+                49.9%{display:block;left:35px;top:65px;
+                transform:rotate(45deg) scale(0);}
+                50%{display:block;left:-35px;top:15px;
+                transform:rotate(45deg) scale(0);}
+                75%{display:block;left:-35px;top:15px;
+                transform:rotate(45deg) scale(2);}
+                99.9%{display:block;left:-35px;top:65px;
+                transform:rotate(45deg) scale(0);}
+            }
+
+        .emoji_sad .emoji_mouth{position:absolute;
+            left:calc(50% - 3px);top:90px;width: 6px;height:6px;
+            border-radius: 50%;
+            box-shadow: -18px 0 0 0 #000,18px 0 0 0 #000;}
+        .emoji_sad .emoji_mouth:after{content:'';position: absolute;
+            left:calc(50% - 30px);top:-10px;width:60px;height: 80px;
+            box-sizing: border-box;border:6px solid #000;
+            border-radius: 50%;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;}
+
+        /* 7.emoji_angry */
+        .emoji_angry{background:linear-gradient(to bottom, #d5234c -10%,#ffda6a 100%);
+            background-size: 100%;}
+        .emoji_angry .emoji_face{position:absolute;width:100%;height:inherit;
+            animation: angry-face 2s ease-in 0s infinite;}
+            @keyframes angry-face{
+                35%,60%{transform: translateX(0) translateY(10px) scale(0.9);}
+
+                40%{transform: translateX(-5px) translateY(10px) scale(0.9);}
+                45%{transform: translateX(5px) translateY(10px) scale(0.9);}
+
+                50%{transform: translateX(-5px) translateY(10px) scale(0.9);}
+                55%{transform: translateX(5px) translateY(10px) scale(0.9);}
+            }
+        .emoji_angry .emoji_eyebrows{position:absolute;left:calc(50% - 3px);top:55px;
+            width:6px;height: 6px;border-radius: 50%;
+            box-shadow:-44px 5px 0 0 #000000,-7px 16px 0 0 #000000,
+            7px 16px 0 0 #000000,44px 5px 0 0 #000000;}
+        .emoji_angry .emoji_eyebrows:before, .emoji_angry .emoji_eyebrows::after{
+            content:'';
+            position:absolute;left:calc(50% - 25px);top:0;
+            width:50px;height: 20px;
+            border:6px solid #000000;border-radius: 50%;
+            box-sizing: border-box;
+            border-top-color:transparent;
+            border-right-color: transparent;
+            border-left-color:transparent;
+        }
+        .emoji_angry .emoji_eyebrows:before{margin-left:-25px;transform: rotate(15deg);}
+        .emoji_angry .emoji_eyebrows:after{margin-left:25px;transform: rotate(-15deg);}
+        .emoji_angry .emoji_eyes{position:absolute;left:calc(50% - 6px);top:70px;
+            width:12px;height:12px;border-radius: 50%;
+            box-shadow:25px 0 0 0 #000000,-25px 0 0 0 #000000;}
+        .emoji_angry .emoji_mouth{position:absolute;left:calc(50% - 18px);bottom:15px;
+            width:36px;height: 18px;background: #000;border-radius:50% ;
+            animation: angry-mouth 2s ease-in 0s infinite;}
+            @keyframes angry-mouth{
+                25%,50%{height:6px;bottom:25px;}
+            }
+
+        /* ryan */
+
+        .ryan{position: relative; top: 300px; left: 35%;}
+        .ryan_face{position:relative;display:inline-block;width:300px;height:280px;border:6px solid black;
+        border-radius: 50%;margin:15px 15px 40px;background-color: #dd9b25;}
+
+        .ryan_ear{position:absolute; left: 22px;}
+        .ryan_ear:before{content:'';position:absolute;
+        background-color: #dd9b25;width:100px;height:100px;
+        border:6px solid #000;border-radius: 50%;}
+        .ryan_ear:after{content:'';position:absolute;left:180px;
+        background-color: #dd9b25;width:100px;height:100px;
+        border:6px solid #000;border-radius: 50%;}
+
+        .ryan_face:hover>.ryan_eyes:after{transform: scaleY(0.1)}
+        .ryan_face:hover>.ryan_eyebrows:after{transform: rotate(-15deg);}
+
+        .ryan_eyebrows{position:absolute;top:75px;}
+        .ryan_eyebrows:before{content:'';position: absolute;left:60px; width:65px;height:15px;
+        background: #000;border-radius: 20px;}
+        .ryan_eyebrows:after{content:'';position: absolute;left:180px; width:65px;height:15px;
+        background: #000;border-radius: 20px;}
+   
+
+        .ryan_eyes{position: absolute;top:120px;}
+        .ryan_eyes:before{content:'';position:absolute;left:80px;width:20px;height:20px;
+        background: #000;border-radius: 50%;}
+        .ryan_eyes:after{content:'';position:absolute;left:200px;width:20px;height:20px;
+        background: #000;border-radius: 50%;}
+
+        .ryan_nose{z-index:2;position:absolute;top:155px;left:142px;width:20px;height: 20px;
+        background: #000;border-radius: 50%;}
+
+        .ryan_mouth{position:absolute;top:160px;}
+        .ryan_mouth:before{content:'';position:absolute;left: 95px;width:60px;height:50px;
+        background: #fff;border:6px solid #000;border-radius: 50%;}
+        .ryan_mouth:after{content:'';position:absolute;left: 140px;width:60px;height:50px;
+        background: #fff;border:6px solid #000;border-radius: 50%;}
+        .ryan_mouth2{z-index:1;top:170px;left:122px;position:absolute;width:60px;height:43px;
+        border-radius: 50%;background: white;}
+    </style>
 </head>
 <body>
 <!-- header -->
@@ -49,7 +361,7 @@
 	<div id="content1">
 		<section>
             <div class="bar_x">
-                <p>#웹UI개발자#꿈나무.KYJ</p>
+                <p><a href="./index.html" style="color: #fff;">#웹UI개발자#꿈나무.KYJ</a></p>
                 <p class="minus_"><span>ㅡ</span></p>
                 <p class="no_no"><span>X</span></p>
             </div>
@@ -63,8 +375,8 @@
     </div>
 	</div>
 	<!-- //content1 -->
-	<!-- content3 -->
-	<div id="content3">
+	<!-- content2 -->
+	<div id="content2">
 		<h2 class="cjone_name">CJONE<span>씨제이원</span></h2>
         <section data-aos="fade-right">
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/cj_one/" target="_blank">
@@ -136,10 +448,9 @@
             </div>
 		</section>
 	</div>
-	<!-- //content3 -->
-	
-	<!-- content4 -->
-	<div id="content4">
+	<!-- //content2 -->
+	<!-- content3 -->
+	<div id="content3">
         <h2 class="mga_name">MEGACOFFEE<span>메가커피</span></h2>
 		<section data-aos="fade-left">
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/Megacoffee/" target="_blank">
@@ -214,9 +525,9 @@
             </div>
 		</section>
 	</div>
-	<!-- //content4 -->
-    <!-- content5 -->
-	<div id="content5">
+	<!-- //content3 -->
+    <!-- content4 -->
+	<div id="content4">
         <h2 class="sa_name">삼성전기</h2>
 		<section data-aos="fade-up-right">
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/Samsung_el/" target="_blank">
@@ -234,6 +545,8 @@
                             <div class="close_btn3" id="close_btn3">x</div>
                             <img src="./img/삼성전기 보고서_1.jpg"  alt="삼성전기보고서"/>
                             <p>웹 접근성 검사를 100%로 통과하였습니다.</p>
+                            <p><a href="img/삼성전기 html 검사.png" target="_blank">Html검사 결과보기</a></p>
+                            <p><a href="img/삼성전기-css검사.PNG" target="_blank">Css검사 결과보기</a></p>
                           </div>
                         </div>
                       </div>
@@ -274,9 +587,9 @@
             </div>
 		</section>
 	</div>
-    <!-- //content5  -->    
-    <!-- contetn6 -->
-    <div id="content6">
+    <!-- //content4  -->    
+    <!-- contetn5 -->
+    <div id="content5">
         <h2 class="ka_name">KAKAO<span>카카오</span></h2>
 		<section data-aos="fade-up-left">
             <div class="white underline"><a class="btn_1" href=" https://shaiod.github.io/kakao_app/" target="_blank">
@@ -308,9 +621,9 @@
             </div>
 		</section>
 	</div>
+    <!-- content5 -->
     <!-- content6 -->
-    <!-- content7 -->
-    <div id="content7">
+    <div id="content6">
         <h2 class="se_name">SEOULSTAY<span>서울스테이</span></h2>
 		<section data-aos="fade-up">
             <div class="white underline"><a class="btn_1" href="https://shaiod.github.io/seoul_stay/" target="_blank">
@@ -388,7 +701,76 @@
             </div>
 		</section>
 	</div>
+    <!-- //content6 -->
+    <!-- content7 -->
+    <div id="content7">
+            <h2 class="pu_name">PURE CSS</h2>
+            <section data-aos="zoom-in">
+            <p> HTML과 CSS로 제작한 이모티콘과 라이언입니다.</p>
+            <div class="emoji emoji_like">
+                <div class="emoji_hand">
+                    <div class="emoji_thumb"></div>
+                </div>
+                </div>
+                
+                <div class="emoji emoji_love">
+                    <div class="emoji_heart"></div>
+                </div>
+        
+                <div class="emoji emoji_haha">
+                    <div class="emoji_face">
+                    <div class="emoji_eyes"></div>
+                    <div class="emoji_mouth">
+                        <div class="emoji_tongue"></div>
+                    </div>
+                </div>
+                </div>
+    
+                <div class="emoji emoji_yay">
+                    <div class="emoji_face">
+                        <div class="emoji_eyebrows"></div>
+                        <div class="emoji_mouth"></div>
+                    </div>
+                </div>
+                
+            <div class="emoji emoji_wow">
+                <div class="emoji_face">
+                    <div class="emoji_eyebrows"></div>
+                    <div class="emoji_eyes"></div>
+                    <div class="emoji_tongue"></div>
+                </div>
+            </div>
+            
+            <div class="emoji emoji_sad">
+                <div class="emoji_face">
+                    <div class="emoji_eyebrows"></div>
+                    <div class="emoji_eyes"></div>
+                    <div class="emoji_mouth"></div>
+                </div>
+            </div>
+        
+            <div class="emoji emoji_angry">
+                <div class="emoji_face">
+                    <div class="emoji_eyebrows"></div>
+                    <div class="emoji_eyes"></div>
+                    <div class="emoji_mouth"></div>
+                </div>
+            </div>
+
+            <div class="ryan">
+                <div class="ryan_ear"></div>
+                <div class="ryan_face">
+                        <div class="ryan_eyebrows"></div>
+                        <div class="ryan_eyes"></div>
+                        <div class="ryan_nose"></div>
+                        <div class="ryan_mouth"></div>
+                        <div class="ryan_mouth2"></div>
+                </div>
+            </div>
+            </section>
+    </div>
     <!-- //content7 -->
+
     <!-- content8 -->
     <div id="content8">
         <section>
@@ -426,14 +808,14 @@
                     
                 </ul>
                 <dl class="skill">
-                    <dt>자격증</dt>
+                    <dt>-자격증</dt>
                     <dd>컴퓨터활용능력1급,2급</dd>
                     <dd>ERP 물류/생산 정보관리사 1급</dd>
                     <dd>워드프로세서1급</dd>
                     <dd>GTQ 1급</dd>
                 </dl>
                 <dl class="ac">
-                    <dt>22.07~ 22.12</dt>
+                    <dt>-22.07~ 22.12</dt>
                     <dd>이젠아카데미 UIUX& 프론트엔드 과정 수료</dd>
                     <dd>CJONE, 삼성전기, 메가커피, 카카오 어플, 서울스테이
                         홈페이지 작업.
@@ -462,7 +844,7 @@
             </div>
         </section>
     </div>
-    <!-- content7 -->
+    <!-- content8 -->
 
 </div>
 <!-- //container -->
@@ -470,12 +852,13 @@
 <!-- quickMenu -->
 <aside>
 	<ul	id="quick" class="quick">
-	<li><a href="#content3" class="on">CJONE</a></li>
-	<li><a href="#content4">MEGACOFFEE</a></li>
-	<li><a href="#content5">삼성전기</a></li>
-	<li><a href="#content6">KAKAO</a></li>
-    <li><a href="#content7">서울스테이</a></li>
-    <li><a href="#content8">CONTACT</a></li>
+	<li><a class="link" href="#content2">CJONE</a></li>
+	<li><a class="link" href="#content3">MEGACOFFEE</a></li>
+	<li><a class="link" href="#content4">삼성전기</a></li>
+	<li><a class="link" href="#content5">KAKAO</a></li>
+    <li><a class="link" href="#content6">서울스테이</a></li>
+    <li><a class="link" href="#content7">Pure Css</a></li>
+    <li><a class="link" href="#content8">CONTACT</a></li>
 	</ul>
 </aside>
 <!-- //quickMenu -->
