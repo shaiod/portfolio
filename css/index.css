@@ -289,9 +289,6 @@ a{color:#666;text-decoration:none;}
 #Me>h2{position: relative; 
     font-weight: bold;
     top: 130px; left: 280px;
-    text-decoration: underline;
-    text-underline-position: under;
-    text-decoration-thickness: 2px;
     font-size: 60px;}
 
 .profile_{width:400px; height: 1000px;}
@@ -1005,7 +1002,7 @@ top: 120px; left:300px;}
 
 #content8{overflow: hidden; height: 100vh;
   color: #000;}
-#content8>section>.con_name{position: relative;
+#content8>.con_name{position: relative;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold; font-size: 100px;
   left: 38%; top: 100px;
@@ -1406,7 +1403,9 @@ button:hover:before {
 .yuyu{position: relative; 
   top: 130px; left: 41%;
   font-size: 30px;}
-
+.rotate_finger{
+  transform: rotate(180deg);
+}
 .thank_text{
 position: relative;
 right: 80px;  top:30px;
