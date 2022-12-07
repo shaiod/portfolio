@@ -38,7 +38,7 @@ $(window).on("wheel", function(e){
 	}
 	var posTop = (page-1) * $(window).height();
  
-	$html.animate({scrollTop : posTop},800);
+	$html.animate({scrollTop : posTop},window.innerHeight); //window.innerheight 한섹션 길이로
  
 });
 
