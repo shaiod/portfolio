@@ -58,34 +58,34 @@ function typing(){
 }
 setInterval(typing, 200)
 
-//메뉴 안보였다가 보이게 하기
-$(document).ready(function(){
+// //메뉴 안보였다가 보이게 하기
+// $(document).ready(function(){
 
-    var asideHeight = $("#quick").height(); 
-    //quick 의 높이를 구하기
+//     var asideHeight = $("#quick").height(); 
+//     //quick 의 높이를 구하기
 
-    $(".quick").hide();
-    //스크롤시 나타날 객체 미리 숨기기
+//     $(".quick").hide();
+//     //스크롤시 나타날 객체 미리 숨기기
 
-    $(window).scroll(function(){  // 윈도우 스크롤 기능 작동
-        var rollIt = $(this).scrollTop() >= asideHeight; 
-// 스크롤의 정도가 asideHeight 의 값을 넘었을 때 == 윈도우 스크롤의 값이 asideHeight 의 높이와 같거나 크다
+//     $(window).scroll(function(){  // 윈도우 스크롤 기능 작동
+//         var rollIt = $(this).scrollTop() >= asideHeight; 
+// // 스크롤의 정도가 asideHeight 의 값을 넘었을 때 == 윈도우 스크롤의 값이 asideHeight 의 높이와 같거나 크다
 
-/*
-scrollTop 은 윈도우에서 스크롤의 위치가 가장 상위에 있다는 의미로 해석
-스크롤의 위치가 화면 아래일수록 == scrollTop 의 값이 커짐
-*/
+// /*
+// scrollTop 은 윈도우에서 스크롤의 위치가 가장 상위에 있다는 의미로 해석
+// 스크롤의 위치가 화면 아래일수록 == scrollTop 의 값이 커짐
+// */
 
-    if(rollIt){ 
-		//윈도우 스크롤 기능의 값이 asideHeight 의 높이와 같거나 크면
-            $(".quick").show().css({"position":"fixed"});
-        }
-        else{
-            $(".quick").hide();
-        }
-    });
+//     if(rollIt){ 
+// 		//윈도우 스크롤 기능의 값이 asideHeight 의 높이와 같거나 크면
+//             $(".quick").show().css({"position":"fixed"});
+//         }
+//         else{
+//             $(".quick").hide();
+//         }
+//     });
     
-});
+// });
 
 // click on 라벨 추가 모달 열기
 $(document).on('click', '#modal_btn', function (e) {
@@ -146,4 +146,95 @@ AOS.init({
   duration: 1000,
 })
 
+
+
+// 해당 버튼을 눌렀을때 이미지 바꾸기
+
+
+// 서울스테이
+$(document).on('click', '.close_btn4', function(){
+  $("#img1").attr("src", "/img/서울스테이 보고서_1.JPG");
+});
+
+$(document).on('click', '.on1', function(){
+  $("#img1").attr("src", "/img/서울스테이-html검사.png");
+});
+
+$(document).on('click', '.on2', function(){
+  $("#img1").attr("src", "/img/css검사-서울스테이.PNG");
+});
+
+
+
+// on 눌렀을때 새로고침 안되게 하기
+const Img= document.querySelector("#img1");
+const on1= document.querySelector(".on1");
+on1.addEventListener('click', function(e) {
+
+  e.preventDefault();
+  
+  });
+
+  const on2= document.querySelector(".on2");
+  on2.addEventListener('click', function(e) {
+  
+    e.preventDefault();
+    
+    });
+
+// 메가커피
+$(document).on('click', '.close_btn2', function(){
+  $("#img2").attr("src", "/img/메가커피 보고서_1.jpg");
+});
+
+$(document).on('click', '.on3', function(){
+  $("#img2").attr("src", "/img/메가커피-html검사.png");
+});
+
+$(document).on('click', '.on4', function(){
+  $("#img2").attr("src", "/img/css검사서비스-메가커피.PNG");
+});
+
+// on 눌렀을때 새로고침 안되게 하기
+const Img2= document.querySelector("#img2");
+const on3= document.querySelector(".on3");
+on3.addEventListener('click', function(e) {
+
+  e.preventDefault();
+  
+  });
+
+const on4= document.querySelector(".on4");
+on4.addEventListener('click', function(e) {
+  
+    e.preventDefault();
+    });
+
+// 삼성전기
+$(document).on('click', '.close_btn3', function(){
+  $("#img3").attr("src", "/img/삼성전기 보고서_1.jpg");
+});
+
+$(document).on('click', '.on5', function(){
+  $("#img3").attr("src", "/img/사본 -삼성전기 html 검사.png");
+});
+
+$(document).on('click', '.on6', function(){
+  $("#img3").attr("src", "/img/삼성전기-css검사.PNG");
+});
+
+// on 눌렀을때 새로고침 안되게 하기
+const Img3= document.querySelector("#img3");
+const on5= document.querySelector(".on5");
+on5.addEventListener('click', function(e) {
+
+  e.preventDefault();
+  
+  });
+
+const on6= document.querySelector(".on6");
+on6.addEventListener('click', function(e) {
+  
+    e.preventDefault();
+    });
 
