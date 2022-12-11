@@ -238,3 +238,17 @@ on6.addEventListener('click', function(e) {
     e.preventDefault();
     });
 
+// 스크롤 이벤트 최적화시키기
+    // window.addEventListener(
+    //   'scroll',
+    //   toFit(onScroll, {
+    //     // triggerCondition:
+    //     // dismissCondition:
+    //   }),
+    //   { passive: true }
+    // )
+  
+const passiveEvent = passiveEventSupported
+?{capture: false, passive: true}
+:false
+document.addEventListener("scroll",onScroll,passiveEvent);
