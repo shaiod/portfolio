@@ -32,7 +32,7 @@ a{color:#666;text-decoration:none;}
 
 
 /* PC */
-@media screen and (min-width:1025px){
+
 /* container */
 #container{z-index:30;position:relative; overflow: hidden;
     font-family: 'S-CoreDream-3Light', 'Ubuntu',sans-serif;}
@@ -74,7 +74,6 @@ a{color:#666;text-decoration:none;}
   inherits: true;
   initial-value: 0deg;
 }
-
 
 .reveal-text {
   color: #fff;
@@ -151,20 +150,20 @@ a{color:#666;text-decoration:none;}
 	white-space: nowrap;
 	cursor: default;}
 	
-	.reveal-text:after {
-		content: "";
-		position: absolute;
-		z-index: 999;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		transform: scaleX(0);
-		transform-origin: 0 50%;
-		pointer-events: none;
-		animation-name: text-revealer;
-	}
-	
+.reveal-text:after {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  pointer-events: none;
+  animation-name: text-revealer;
+}
+
 
 
 @keyframes clip-text {
@@ -1164,7 +1163,7 @@ left: 3px;}
 /* 햄버거 메뉴 */
 
 #subMenu{color: #fff;
-font-size: 30px;
+font-size: 28px;
 font-family: 'Ubuntu','S-CoreDream-3Light',sans-serif;}
 #subMenu a{color: #fff;}
 
@@ -1331,7 +1330,6 @@ font-size: 80px;
 font-family: 'Ubuntu',sans-serif;
 font-weight: bold;
 }
-
 
 
 
@@ -1803,20 +1801,20 @@ top: 350px; left: 180px;
 
 #modal_btn2{position: relative;
   top: 41rem;left: 32rem;}
-  
-  .modal2 {
-    position: absolute;
-    z-index: 20;
-    top: 0;
-    left: 0;
-  
-    width: 85%;
-    height: 100%;
-  
-    display: none;
-  
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+
+.modal2 {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+
+  width: 85%;
+  height: 100%;
+
+  display: none;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
   
   .modal2 p{position: relative;
   width: 350px;
@@ -2498,6 +2496,4 @@ button:hover:before {
 transition: .5s,60s linear --d;}
 button:hover:before {
 background-color: #222;}
-}
-
 }

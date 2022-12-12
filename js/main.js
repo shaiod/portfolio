@@ -153,15 +153,15 @@ AOS.init({
 
 // 서울스테이
 $(document).on('click', '.close_btn4', function(){
-  $("#img1").attr("src", "/img/서울스테이 보고서_1.JPG");
+  $("#img1").attr("src", "./img/서울스테이 보고서_1.JPG");
 });
 
 $(document).on('click', '.on1', function(){
-  $("#img1").attr("src", "/img/서울스테이-html검사.png");
+  $("#img1").attr("src", "./img/서울스테이-html검사.png");
 });
 
 $(document).on('click', '.on2', function(){
-  $("#img1").attr("src", "/img/css검사-서울스테이.PNG");
+  $("#img1").attr("src", "./img/css검사-서울스테이.PNG");
 });
 
 
@@ -184,15 +184,15 @@ on1.addEventListener('click', function(e) {
 
 // 메가커피
 $(document).on('click', '.close_btn2', function(){
-  $("#img2").attr("src", "/img/메가커피 보고서_1.jpg");
+  $("#img2").attr("src", "./img/메가커피 보고서_1.jpg");
 });
 
 $(document).on('click', '.on3', function(){
-  $("#img2").attr("src", "/img/메가커피-html검사.png");
+  $("#img2").attr("src", "./img/메가커피-html검사.png");
 });
 
 $(document).on('click', '.on4', function(){
-  $("#img2").attr("src", "/img/css검사서비스-메가커피.PNG");
+  $("#img2").attr("src", "./img/css검사서비스-메가커피.PNG");
 });
 
 // on 눌렀을때 새로고침 안되게 하기
@@ -212,15 +212,15 @@ on4.addEventListener('click', function(e) {
 
 // 삼성전기
 $(document).on('click', '.close_btn3', function(){
-  $("#img3").attr("src", "/img/삼성전기 보고서_1.jpg");
+  $("#img3").attr("src", "./img/삼성전기 보고서_1.jpg");
 });
 
 $(document).on('click', '.on5', function(){
-  $("#img3").attr("src", "/img/사본 -삼성전기 html 검사.png");
+  $("#img3").attr("src", "./img/사본 -삼성전기 html 검사.png");
 });
 
 $(document).on('click', '.on6', function(){
-  $("#img3").attr("src", "/img/삼성전기-css검사.PNG");
+  $("#img3").attr("src", "./img/삼성전기-css검사.PNG");
 });
 
 // on 눌렀을때 새로고침 안되게 하기
